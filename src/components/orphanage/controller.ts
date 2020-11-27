@@ -17,7 +17,7 @@ export default class OrphanageController {
     const reImages = req.files;
 
     if (!Array.isArray(reImages)) {
-      return res.status(400).json("incorrect image upload");
+      return res.status(400).json("Upload da imagem incorreto!");
     }
 
     const images = reImages.map((image) => {
@@ -52,7 +52,7 @@ export default class OrphanageController {
     const intId = parseInt(id, 10);
 
     if (Number.isNaN(intId) || intId <= 0) {
-      return res.status(400).json("id must be a positive integer");
+      return res.status(400).json("O ID deve ser um número inteiro positivo!");
     }
 
     return OrphanageService.show(intId)
