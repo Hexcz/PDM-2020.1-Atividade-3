@@ -4,7 +4,6 @@ import { MigrationInterface, QueryRunner, Table } from "typeorm";
 
 export default class create1604790776432 implements MigrationInterface {
   public async up(queryRunner: QueryRunner): Promise<void> {
-    console.log("chegou aqui");
 
     await queryRunner.createTable(
       new Table({
