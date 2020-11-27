@@ -10,7 +10,7 @@ const uploadMulter = multer(uploadConfig);
 
 routes.post(
   "/",
-  uploadMulter.array("image"),
+  uploadMulter.array("images"),
   OrphanageMiddleware.create,
   OrphanageController.create
 );
