@@ -11,7 +11,6 @@ process.on("uncaughtException", (error: Error) => {
   ErrorHandler.handleError(error);
   if (!ErrorHandler.isTrustedError(error)) {
     server.close(() => {
-      console.log("chegou aqui");
       process.exit(1);
     });
   }
