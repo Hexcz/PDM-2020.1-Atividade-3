@@ -9,7 +9,7 @@ export default class ImageView {
   public static render(image: ImageModel): ImageViewInterface {
     return {
       id: image.id,
-      url: `http://localhost:8080/upload/${image.path}`,
+      url: `http://192.168.1.5:8080/upload/${image.path}`,
     };
   }
 
